@@ -99,27 +99,49 @@
             </div>
         </div>
     </section>
+    <?php
+    $services = [
+        [
+            'title' => 'Music Video',
+            'title_class' => 'card-title-primary',
+            'subtitle' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse neque ex nobis enim quas, quae impedit consequatur porro velit repudiandae illo eum sed error qui facere ipsam pariatur eveniet veniam.',
+            'subtitle_class' => 'card-subtitle-accent'
+        ],
+        [
+            'title' => 'Cinematic',
+            'title_class' => 'card-title-accent',
+            'subtitle' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse neque ex nobis enim quas, quae impedit consequatur porro velit repudiandae illo eum sed error qui facere ipsam pariatur eveniet veniam.',
+            'subtitle_class' => 'card-subtitle-primary'
+        ],
+        [
+            'title' => 'Motion Graphic',
+            'title_class' => 'card-title-accent',
+            'subtitle' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse neque ex nobis enim quas, quae impedit consequatur porro velit repudiandae illo eum sed error qui facere ipsam pariatur eveniet veniam.',
+            'subtitle_class' => 'card-subtitle-primary'
+        ],
+        [
+            'title' => 'Web-Dev',
+            'title_class' => 'card-title-primary',
+            'subtitle' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse neque ex nobis enim quas, quae impedit consequatur porro velit repudiandae illo eum sed error qui facere ipsam pariatur eveniet veniam.',
+            'subtitle_class' => 'card-subtitle-accent'
+        ]
+    ];
+    ?>
     <section id="services">
         <div class="container">
             <h1>My Services<span class="accent">//</span></h1>
         </div>
         <div class="card-container">
-            <div class="card">
-                <h2 class="card-title-primary">Music Video</h2>
-                <p class="card-subtitle-accent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse neque ex nobis enim quas, quae impedit consequatur porro velit repudiandae illo eum sed error qui facere ipsam pariatur eveniet veniam.</p>
-            </div>
-            <div class="card">
-                <h2 class="card-title-accent">Cinematic</h2>
-                <p class="card-subtitle-primary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse neque ex nobis enim quas, quae impedit consequatur porro velit repudiandae illo eum sed error qui facere ipsam pariatur eveniet veniam.</p>
-            </div>
-            <div class="card">
-                <h2 class="card-title-accent">Motion Graphic</h2>
-                <p class="card-subtitle-primary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse neque ex nobis enim quas, quae impedit consequatur porro velit repudiandae illo eum sed error qui facere ipsam pariatur eveniet veniam.</p>
-            </div>
-            <div class="card">
-                <h2 class="card-title-primary">Web-Dev</h2>
-                <p class="card-subtitle-accent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse neque ex nobis enim quas, quae impedit consequatur porro velit repudiandae illo eum sed error qui facere ipsam pariatur eveniet veniam.</p>
-            </div>
+            <?php foreach ($services as $service): ?>
+                <div class="card">
+                    <h2 class="<?php echo $service['title_class']; ?>">
+                        <?php echo $service['title']; ?>
+                    </h2>
+                    <p class="<?php echo $service['subtitle_class']; ?>">
+                        <?php echo $service['subtitle']; ?>
+                    </p>
+                </div>
+            <?php endforeach; ?>
         </div>
     </section>
     <section id="projects" class="container">
